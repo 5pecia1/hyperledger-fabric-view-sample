@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ling</title>
+</head>
+<script src="/jquery-3.2.1.min.js"></script>
+
+<body>
+    <h2>사용자 회원가입</h2>
+    <form id="userRegister">
+        <input type="text" placeholder="email" name="email"> <br>
+        <input type="text" placeholder="password" name="password"> <br>
+        <input type="text" placeholder="phone" name="phone"> <br>
+        <input type="text" placeholder="address" name="address"> <br>
+        <input type="text" placeholder="name" name="name"> <br>
+        <input type="text" placeholder="date_of_birth" name="date_of_birth"> <br>
+        <input type="button" value="register" name="register" onclick="userRegisterFunc()">
+    </form>
+
+    <h2>사용자 로그인</h2>
+    <form action="">
+        <input type="button" value="userLogin" onclick="goUserLogin()">
+    </form>
+
+    <h2>판매자 회원가입</h2>
+    <form id="sellerRegister">
+        <input type="text" placeholder="email" name="email"> <br>
+        <input type="text" placeholder="password" name="password"> <br>
+        <input type="text" placeholder="phone" name="phone"> <br>
+        <input type="text" placeholder="name" name="name"> <br>
+        <input type="text" placeholder="web_site" name="web_site"> <br>
+        <input type="button" value="register" name="register" onclick="sellerRegisterFunc()">
+    </form>
+
+    <h2>판매자 로그인</h2>
+    <form action="">
+        <input type="button" value="sellerLogin" onclick="goSellerLogin()">
+    </form>
+
+
+    <script>
+        // 유저 회원가입
+        function userRegisterFunc() {
+            var reqJsonData = $("#userRegister").serializeObject(); // 폼 데이터 json 형식으로 받기
+            $.ajax({
+                method: 'POST',
+                url: '/userRegister',
+                data: reqJsonData,
+                success: (res) => {
+                    console.log(res)
+                }
+            });
+        }
+
+        // 유저 로그인 페이지로 이동
+        function goUserLogin() {
+            window.location.href = '/userLoginPage';
+        }
+
+
+        // 판매자 회원가입
+        function sellerRegisterFunc() {
+            var reqJsonData = $("#sellerRegister").serializeObject(); // 폼 데이터 json 형식으로 받기
+            $.ajax({
+                method: 'POST',
+                url: '/sellerRegister',
+                data: reqJsonData,
+                success: (res) => {
+                    console.log(res)
+                }
+            });
+        }
+
+        // 판매자 로그인 페이지로 이동
+        function goSellerLogin() {
+            window.location.href = '/sellerLoginPage';
+        }
+    </script>
+
+</body>
+
+</html>
