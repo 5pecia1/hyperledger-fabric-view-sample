@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/sample-view.css">
+    <script type="text/javascript" src="js/sample-view.js"></script>
     <title>View Sample</title>
 </head>
 <body>
     <h1>Blockchain Sample View</h1>
+    
     <div class="map">
        
     </div> 
@@ -16,8 +19,8 @@
     max, min, 
     GPS-lat, GPS-lng 
     -->
-    <!--ul>(li>table>(tr.block_count>th{Count}+(td[colspan=2]{$}))+(tr.block_time>th{Time}+td[colspan=2]{$$$$ / $$ / $$ - $$ : $$ : $$})+(tr.block_cds>(th[rowspan=2]{CDS}+td{max}+td.block_cds_max{$$$$$}))+(tr>(td{min}+td.block_cds_min{$$$$$}))+(tr.block_gps>(th[rowspan=2]{GPS}+td{lng}+td.block_gps_lng{$$.$$$$$}))+(tr>td{lat}+td.block_gps_lat{$$.$$$$$}))*11-->
-    <ul>
+    <!--ul#block_list>(li>table>(tr.block_count>th{Count}+(td[colspan=2]{$}))+(tr.block_time>th{Time}+td[colspan=2]{$$$$ / $$ / $$ - $$ : $$ : $$})+(tr.block_cds>(th[rowspan=2]{CDS}+td{max}+td.block_cds_max{$$$$$}))+(tr>(td{min}+td.block_cds_min{$$$$$}))+(tr.block_gps>(th[rowspan=2]{GPS}+td{lng}+td.block_gps_lng{$$.$$$$$}))+(tr>td{lat}+td.block_gps_lat{$$.$$$$$}))*11-->
+    <ul id="block_list">
         <li>
             <table>
                 <tr class="block_count">
