@@ -1,5 +1,5 @@
 /*
- * 다음 api를 이용해서 div.map에 지도를 넣자
+ * 다음 api를 이용해서 div#map에 지도를 넣자
  * ul#block_list의 안의 모든 table에서 가리키는 lng lat을 마커로 표시한다.
  * table 태그를 클릭하면 해당 lng lat 위치로 이동이 된다
  * 가능하면 마커에 마우스를 올리면 정보를 띄워보자
